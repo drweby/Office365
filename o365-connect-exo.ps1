@@ -46,7 +46,7 @@ connect-msolservice -credential $cred
 write-host -foregroundcolor $systemmessagecolor "Now connected to Office 365 Admin service"
 
 ## Start Exchange Online session
-$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/?proxyMethod=RPS -Credential $Cred -Authentication Basic -AllowRedirection
+$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/?proxymethod=rps -Credential $Credentials -Authentication Basic -AllowRedirection
 import-PSSession $Session
 write-host -foregroundcolor $processmessagecolor "Now connected to Exchange Online services`n"
 write-host -foregroundcolor $systemmessagecolor "Script Completed`n"
